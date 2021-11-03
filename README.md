@@ -14,3 +14,30 @@
 다음 프로젝트에서는 기능은 좀 더 줄이더라도, 더 탄탄하게 코드를 짤 수 있도록 하겠습니다. 
 
 또한 발표도 좀 더 스무스하게 할 수 있도록 노력해보겠습니다.
+
+*MySQL 테이블 생성 명령어*
+
+create table user (
+id varchar(20) not null,
+pwd varchar(20) not null,
+birth date not null,
+bestbrain int default 0,
+curbrain int default 0,
+curbraindate date default '2000-01-01',
+curlogindate date default '2000-01-01',
+primary key(id)
+);
+
+create table record (
+id varchar(20) not null,	
+date date not null,
+brainage int default 0,	
+순서연결 int default 0,
+가위바위보 int default 0,
+계산25회 int default 0,
+고속세기 int default 0, 
+기억5X5 int default 0,
+연속뺄셈 int default 0,
+primary key(id, date),
+FOREIGN KEY(id) REFERENCES user(id) ON DELETE CASCADE
+);
