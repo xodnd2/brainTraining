@@ -37,7 +37,7 @@ create table user (\
   curbraindate date default '2000-01-01',\
   curlogindate date default '2000-01-01',\
   primary key(id)\
-);\
+);
 
 create table record (\
   id varchar(20) not null,\
@@ -51,4 +51,4 @@ create table record (\
   연속뺄셈 int default 0,\
   primary key(id, date),\
   FOREIGN KEY(id) REFERENCES user(id) ON DELETE CASCADE\
-);\
+);
