@@ -16,39 +16,39 @@
 또한 발표도 좀 더 스무스하게 할 수 있도록 노력해보겠습니다.
 
 ***폴더 설명***\
-Base 폴더 : 기본적인 뼈대 폼 모음\n
-Test 폴더 : 각각 테스트들의 폼 모음\n
-Data 폴더 : 데이터를 관리하는 클래스거나 , 프로퍼티를 지닌 클래스들 모음.\n
-            ㄴDataManager.cs 전체적인 데이터를 관리하는 메소드 모음. \n
-            ㄴRecordCalculate.cs 테스트 결과를 나이로 변환, 분/초/밀리초 단위로 변환 등. \n
+Base 폴더 : 기본적인 뼈대 폼 모음\
+Test 폴더 : 각각 테스트들의 폼 모음\
+Data 폴더 : 데이터를 관리하는 클래스거나 , 프로퍼티를 지닌 클래스들 모음.\
+            ㄴDataManager.cs 전체적인 데이터를 관리하는 메소드 모음. \
+            ㄴRecordCalculate.cs 테스트 결과를 나이로 변환, 분/초/밀리초 단위로 변환 등. \
 
 ***의문점(?)***\n
-분명 1000밀리초가 1초인데, 윈폼 타이머로 60밀리초가 1초에 가까움..\n
-https://smartfactory121.tistory.com/90 (이곳 참조)\n
+분명 1000밀리초가 1초인데, 윈폼 타이머로 60밀리초가 1초에 가까움..\
+https://smartfactory121.tistory.com/90 (이곳 참조)\
             
-***MySQL 테이블 생성 명령어***\n
+***MySQL 테이블 생성 명령어***\
 
-create table user (\n
-  id varchar(20) not null,\n
-  pwd varchar(20) not null,\n
-  birth date not null,\n
-  bestbrain int default 0,\n
-  curbrain int default 0,\n
-  curbraindate date default '2000-01-01',\n
-  curlogindate date default '2000-01-01',\n
-  primary key(id)\n
-);\n
+create table user (\
+  id varchar(20) not null,\
+  pwd varchar(20) not null,\
+  birth date not null,\
+  bestbrain int default 0,\
+  curbrain int default 0,\
+  curbraindate date default '2000-01-01',\
+  curlogindate date default '2000-01-01',\
+  primary key(id)\
+);\
 
-create table record (\n
-  id varchar(20) not null,\n
-  date date not null,\n
-  brainage int default 0,\n	
-  순서연결 int default 0,\n
-  가위바위보 int default 0,\n
-  계산25회 int default 0,\n
-  고속세기 int default 0,\n 
-  기억5X5 int default 0,\n
-  연속뺄셈 int default 0,\n
-  primary key(id, date),\n
-  FOREIGN KEY(id) REFERENCES user(id) ON DELETE CASCADE\n
-);\n
+create table record (\
+  id varchar(20) not null,\
+  date date not null,\
+  brainage int default 0,\
+  순서연결 int default 0,\
+  가위바위보 int default 0,\
+  계산25회 int default 0,\
+  고속세기 int default 0,\
+  기억5X5 int default 0,\
+  연속뺄셈 int default 0,\
+  primary key(id, date),\
+  FOREIGN KEY(id) REFERENCES user(id) ON DELETE CASCADE\
+);\
