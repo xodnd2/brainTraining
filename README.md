@@ -20,11 +20,11 @@ Base 폴더 : 기본적인 뼈대 폼 모음\
 Test 폴더 : 각각 테스트들의 폼 모음\
 Data 폴더 : 데이터를 관리하는 클래스거나 , 프로퍼티를 지닌 클래스들 모음.\
             ㄴDataManager.cs 전체적인 데이터를 관리하는 메소드 모음. \
-            ㄴRecordCalculate.cs 테스트 결과를 나이로 변환, 분/초/밀리초 단위로 변환 등. \
+            ㄴRecordCalculate.cs 테스트 결과를 나이로 변환, 분/초/밀리초 단위로 변환 등.
 
-***의문점(?)***\n
+***의문점(?)***\
 분명 1000밀리초가 1초인데, 윈폼 타이머로 60밀리초가 1초에 가까움..\
-https://smartfactory121.tistory.com/90 (이곳 참조)\
+https://smartfactory121.tistory.com/90 (이곳 참조)
             
 ***MySQL 테이블 생성 명령어***\
 
